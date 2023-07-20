@@ -11,7 +11,9 @@ for i in range(1, 11):
     # JSON -> dict 데이터 변환
     parsed_data = response.json()
     # 특정 데이터 리스트에 저장
-    dummy_data.append(parsed_data['name'])
+    if float(((parsed_data['address'])['geo'])['lat']) > -80.0 and float(((parsed_data['address'])['geo'])['lat']) < 80.0:
+            if float(((parsed_data['address'])['geo'])['lng']) > -80.0 and float(((parsed_data['address'])['geo'])['lng']) < 80.0:
+                dummy_data.append({'company': (parsed_data['company'])['name'], 'lat':((parsed_data['address'])['geo'])['lat'], 'lng': ((parsed_data['address'])['geo'])['lng'], 'name': parsed_data['name']})
 
 # 데이터 리스트 출력
 print(dummy_data)
