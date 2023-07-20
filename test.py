@@ -1,11 +1,24 @@
-# ws_3_3.py
-import my_math
-rental = dict()
+paddings = [3,7]
+outers = [8,3,5]
+inners = [5,3,8,5]
 
-def rental_book(name, number):
-    my_math.decrease_book(number)
-    rental = {'name': name, 'number': number}
-    print(f'{name}님이 {number}권의 책을 대여하였습니다.')
-    return rental
+for padding in paddings:
+    for outer in outers:
+        for inner in inners:
+            print(padding, outer, inner)
 
-rental_book('홍길동', 3)
+# 3 8 5   7 8 5
+# 3 8 3   7 8 3
+# 3 8 8   7 8 8
+# 3 8 5   7 8 5
+
+# 3 3 5   7 3 5
+# 3 3 3   7 3 3
+# 3 3 8   7 3 8
+# 3 3 5   7 3 5
+
+# 3 5 5   7 5 5
+# 3 5 3   7 5 3
+# 3 5 8   7 5 8
+# 3 5 5   7 5 5
+
