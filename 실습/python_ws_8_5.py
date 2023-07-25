@@ -37,9 +37,9 @@ class Pet(Dog, Cat):
     # def play(self):
     #     print('애완동물과 놀기')
 
-pet1 = Dog()
-pet2 = Cat()
+# pet1 = Dog()
+# pet2 = Cat()
 pet3 = Pet()
-print(pet1.sound)
-print(pet2.sound)
+# print(pet1.sound)
+# print(pet2.sound)
 print(pet3)
