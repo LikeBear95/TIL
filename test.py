@@ -1,15 +1,24 @@
-# ws_5_5.py
+# hw_6_4.py
+
 
 # 아래 함수를 수정하시오.
-def even_elements(numbers):
-    result = []
-    while numbers:
-        number = numbers.pop(0)
-        if number % 2 == 0:
-            result.extend([number])
-    return result
+def add_item_to_dict(dict, key, value):
+    dict.update(key = value)
+    return dict
 
-
-my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-result = even_elements(my_list)
+my_dict = {'name': 'Alice', 'age': 25}
+result = add_item_to_dict(my_dict, 'country', 'USA')
 print(result)
+
+
+# person = {'name': 'Alice', 'age': 25}
+# other_person = {'name': 'Jane', 'gender': 'Female'}
+
+# person.update(other_person)
+# print(person)
+
+# person.update(age=50)
+# print(person)
+
+# person.update(country='KOREA')
+# print(person)
