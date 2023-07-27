@@ -1,4 +1,4 @@
-# ws_7_4.py
+# ws_7_5.py
 
 # 아래 클래스를 수정하시오.
 class Shape:
@@ -15,8 +15,8 @@ class Shape:
     def print_info(self):
         print(f'Width: {self.width}')
         print(f'Height: {self.height}')
-        print(f'Area: {self.width * self.height}')
-        print(f'Perimeter: {(self.width + self.height) * 2}')
+        print(f'Area: {self.calculate_area()}')
+        print(f'Perimeter: {self.calculate_perimeter()}')
 
     def __str__(self):
         return f'Shape: width={self.width}, height={self.height}'
