@@ -1,24 +1,35 @@
-# hw_6_4.py
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def greeting(self):
+        return f'안녕, {self.name}'
 
 
-# 아래 함수를 수정하시오.
-def add_item_to_dict(dict, key, value):
-    dict.update(key = value)
-    return dict
+class Mom(Person):
+    gene = 'XX'
 
-my_dict = {'name': 'Alice', 'age': 25}
-result = add_item_to_dict(my_dict, 'country', 'USA')
-print(result)
+    def swim(self):
+        return '엄마가 수영'
 
 
-# person = {'name': 'Alice', 'age': 25}
-# other_person = {'name': 'Jane', 'gender': 'Female'}
+class Dad(Person):
+    gene = 'XY'
 
-# person.update(other_person)
-# print(person)
+    def walk(self):
+        return '아빠가 걷기'
+        
 
-# person.update(age=50)
-# print(person)
+class FirstChild(Dad, Mom):
+    def swim(self):
+        return '첫째가 수영'
 
-# person.update(country='KOREA')
-# print(person)
+    def cry(self):
+        return '첫째가 응애'
+
+
+baby1 = FirstChild('아가')
+print(baby1.cry())  # 첫째가 응애
+print(baby1.swim()) # 첫째가 수영
+print(baby1.walk()) # 아빠가 걷기
+print(baby1.gene)   # XY
