@@ -9,7 +9,7 @@ class UserInfo():
             self.age= int(input('나이를 입력하세요: '))
             self.user_list['name'] = self.name
             self.user_list['age'] = self.age
-        except:
+        except ValueError:
             print("나이는 숫자로 입력해야 합니다.")
 
     def display_user_info(self):
