@@ -1,25 +1,11 @@
-# hw_7_2.py
+T = int(input())
+# 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
+for test_case in range(1, T + 1):
+	numbers = input()
+	number_list = list(map(int, numbers.split(" ")))
+	result = 0
+	for i in number_list:
+         if i % 2 != 0:
+            result += int(i)
 
-class UserInfo():
-    user_list = {}
-
-    def get_user_info(self):
-        try:
-            self.name = input('이름을 입력하세요: ')
-            self.age= int(input('나이를 입력하세요: '))
-            self.user_list['name'] = self.name
-            self.user_list['age'] = self.age
-        except ValueError:
-            print("나이는 숫자로 입력해야 합니다.")
-
-    def display_user_info(self):
-        if len(self.user_list) > 0:
-            print('사용자 정보: ')
-            print('이름:', self.user_list['name'])
-            print(f'나이: {self.user_list["age"]}')
-        else:
-            print("사용자 정보가 입력되지 않았습니다.")
-
-user1 = UserInfo()
-user1.get_user_info()
-user1.display_user_info()
+print(result)
