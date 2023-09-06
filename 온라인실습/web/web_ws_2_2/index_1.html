@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .card{
+    border:1px solid black;
+    width:700px;
+    height:330px;
+    padding:20px;
+    }
+
+    .card-container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .card-img{
+        width:150px;
+        height:150px;
+    }
+
+    h2{
+        display: flex;
+        align-items: center;
+    }
+
+    .card-section{
+        /* background-color: red; */
+        display: flex;
+        justify-content: space-between;
+        margin:20px 0px;
+        padding: 0px 20px;
+    }
+
+    .card-section-name{
+        text-align: center;
+    }
+
+    .card-section-name .gotoTop {
+        margin-top: -12px;
+    }
+
+    .footer{
+        text-align: end;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-container">
+      <img src="profile.jpg" alt="Profile Image" class="card-img">
+      <h2>Company Name</h2>
+    </div>
+    <div class="card-section">
+      <div class="card-section-name">
+        <h3>한글 이름</h3>
+        <h4 class="gotoTop">English Name</h4>
+      </div>
+      <div>
+        <p>Phone Number</p>
+        <p>Email</p>
+      </div>
+    </div>
+    <hr>
+    <div class="footer">
+      <p>description</p>
+    </div>
+  </div>
+</body>
