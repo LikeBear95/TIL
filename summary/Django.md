@@ -155,3 +155,42 @@ INSTALLED_APPS = [
 - URL 일부에 변수를 포함시키는 것
     - <path_converter:variable_name>
     - path converters : URL 변수의 타입
+    
+# Model
+- 테이블 구조를 설계하는 '청사진(blueprint)'
+
+# Model 클래스 살펴보기
+- django.db.models 모듈의 Model 이라는 부모 클래스를 상속받음
+
+# Migrations
+- model 클래스의 변경사항(필드 생성, 수정 삭제 등)을 DB에 최종 반영하는 방법
+
+```
+
+$ python manage.py showmigrations
+
+- 최종 설계도 작성
+$ python manage.py makemigrations
+
+- DB에 전달해서 반영
+$ python manage.py migrate
+```
+
+# 추가 모델 필드 작성
+1. model class에 변경사항이 생겼다면, **model class 변경**
+2. 반드시 새로운 설계도를 생성하고,    **makemigrations**
+3. 이를 DB에 반영                    **migrate**
+
+
+# modef field
+- 해당 필드에 저장되는 데이터 타입과 제약조건을 정의
+
+## CharField()
+- 길이의 제한이 있는 문자열을 넣을 때 사용, max_length
+## TextField()
+- 글자 수가 많을 때 사용
+## DateTimeField()
+- 날짜와 시간을 넣을 때 사용
+    - auto_now: 저장될 때마다
+    - auto_now_add: 처음 생성될 때만
+
