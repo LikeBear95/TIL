@@ -151,3 +151,7 @@ INSTALLED_APPS = [
 # form 데이터를 가져오는 방법
 - request.GET.get('message')
 
+# Variable Routing
+- URL 일부에 변수를 포함시키는 것
+    - <path_converter:variable_name>
+    - path converters : URL 변수의 타입
